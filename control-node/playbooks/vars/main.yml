@@ -1,0 +1,10 @@
+mysql_root_password: rafaelcorrea
+mysql_database:
+  - name: devops
+    encoding: latin1
+    collation: latin1_general_ci
+mysql_users:
+  - name: devopsapp
+    hosts: "%"
+    password: rafaelcorrea
+    priv: "devops.*:ALL"
