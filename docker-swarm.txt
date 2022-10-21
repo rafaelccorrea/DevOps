@@ -1,0 +1,19 @@
+--- Docker Swarm ---
+
+-- Criar cluster com swarm --
+docker swarm init --advertise-addr 192.168.56.3
+
+-- Criando service swarm com nginx --
+docker service create --name demo --publish 80:80 nginx
+
+-- Consultar cluster --
+docker node ls
+
+-- Consultar Service cluster --
+docker service ls
+
+-- Escalando services para containers --
+docker service scale demo=3
+
+-- Consultar se está no Ar --
+curl http://192.168.56.3 ou no local host port 8090
