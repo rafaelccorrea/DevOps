@@ -20,3 +20,4 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 systemctl daemon-reload
 systemctl restart docker
 usermod -aG docker jenkins
+sudo chmod 666 /var/run/docker.sock
